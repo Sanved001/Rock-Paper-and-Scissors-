@@ -1,8 +1,11 @@
 import random
 def RPS():
-    user_input = int(input('''
+    try:
+        user_input = int(input('''
 Enter The corrosponding Number of Your Action || 1.Rock 2.Paper 3.Sissors || 0 to Exit
 =>'''))
+    except:
+        print("INVALID INPUT)
     if user_input == 0:
         exit()
     computer_input = random.choice([1, 2, 3])
